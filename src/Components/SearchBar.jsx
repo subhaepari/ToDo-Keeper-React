@@ -16,7 +16,7 @@ export default function SearchBar(props) {
 
   return (
     <div>
-      <input
+      {/* <input
         onChange={handleChange}
         type="search"
         placeholder="Search by description..."
@@ -24,6 +24,17 @@ export default function SearchBar(props) {
         style={{ borderColor: "white" }}
         size = "37"
       />
+       */}
+        <Form className="d-flex">
+        <Form.Control
+          type="search"
+          placeholder="Search by description..."
+          aria-label="Search"
+          onChange={handleChange}
+          value={searchTerm} 
+          //size = "37"
+          size = "sm"
+        />
 
       
       {/* <button type="submit"><i class="fa fa-search"></i></button> */}
@@ -34,6 +45,8 @@ export default function SearchBar(props) {
           title="Search Tasks"
         />
       </Button>
+
+      </Form>
     </div>
   );
 }
