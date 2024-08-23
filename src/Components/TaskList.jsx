@@ -15,11 +15,22 @@ export default function TaskList(props) {
       <section id="usertasks">
        
 
-        {tasks.length == 0 && 
+        {tasks.length === 0 && 
            ( <h6 style={{marginLeft: "100px"}}> No tasks to display!</h6>)
         }
 
         <Table responsive hover striped>
+        {tasks.length !== 0 && 
+            <thead ><tr>
+            <th>Priority</th>
+            <th>Task</th>
+            <th>Category</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr></thead>
+        }
           <tbody>
             {tasks.map((task) => (
               <Task

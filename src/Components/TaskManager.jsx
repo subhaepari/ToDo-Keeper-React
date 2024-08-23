@@ -605,7 +605,7 @@ export default function TaskManager() {
                           <label
                             style={{ marginLeft: "10px", color: "darkgreen" }}
                           >
-                            {filterCriteria.selectedStatus
+                            {filterCriteria.selectedStatus == "true"
                               ? "Completed"
                               : "Pending"}
                           </label>

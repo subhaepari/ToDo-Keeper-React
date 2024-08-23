@@ -31,6 +31,7 @@ export default function Task(props) {
         <img src={priorityImg} />
       </td>
       <td>{task.description}</td>
+      <td>{task.category}</td>
       <td>{task.deadline}</td>
       <td>
         <button style={{ border: 0 }} onClick={handleStatusToggle}>
